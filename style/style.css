@@ -2,19 +2,40 @@ html {
   box-sizing: border-box;
 }
 
+/* 🌈 COLORFUL BACKGROUND FOR ENTIRE SITE */
 body {
   margin: 0;
   font-family: "Work Sans", sans-serif;
+
+  background: linear-gradient(
+    135deg,
+    #ff9a9e,
+    #fad0c4,
+    #fbc2eb,
+    #a6c1ee,
+    #84fab0,
+    #8fd3f4
+  );
+  background-size: 500% 500%;
+  animation: gradientBG 14s ease infinite;
+}
+
+/* Animated gradient */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .container {
   height: 100vh;
-  width: 100vw;
+  width: 100vh;
   margin: 0 auto;
   text-align: center;
   visibility: hidden;
   position: relative;
   overflow: hidden;
+  color: #2b2b2b;
 }
 
 .container div.six {
@@ -37,8 +58,10 @@ body {
   top: 20vh;
 }
 
+/* 🌟 TEXT STYLING */
 .one {
   font-size: 4.5rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
 .one > img {
@@ -51,19 +74,24 @@ body {
 .two {
   font-size: 1.2rem;
   font-weight: lighter;
+  text-shadow: 0 1px 5px rgba(0,0,0,0.15);
 }
 
 .three {
   font-size: 3rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
+/* 💬 CHAT BOX */
 .four .text-box {
   width: 600px;
   margin: 0 auto;
-  border: 3px solid #aaa;
-  border-radius: 5px;
-  padding: 10px;
+  border: 3px solid rgba(255,255,255,0.6);
+  border-radius: 10px;
+  padding: 12px;
   position: relative;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(6px);
 }
 
 .text-box p {
@@ -77,25 +105,29 @@ body {
 
 .text-box .fake-btn {
   position: absolute;
-  right: 5px;
-  bottom: 5px;
+  right: 8px;
+  bottom: 8px;
   color: #fff;
   background-color: rgb(21, 161, 237);
-  padding: 5px 8px;
-  border-radius: 3px;
+  padding: 6px 10px;
+  border-radius: 6px;
 }
 
+/* 💡 IDEA SECTION */
 .five p {
   font-size: 2rem;
   position: absolute;
   left: 0;
   right: 0;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
 .idea-3 strong {
-  padding: 3px 5px;
-  border-radius: 3px;
+  padding: 4px 8px;
+  border-radius: 6px;
   display: inline-block;
+  background: #ff69b4;
+  color: #fff;
 }
 
 .five .idea-5 {
@@ -112,18 +144,17 @@ body {
   font-size: 15rem;
 }
 
+/* 🖼 IMAGE SECTION (UNCHANGED SIZE) */
 .six {
   position: relative;
 }
 
-/* ✅ FINAL IMAGE SIZE FIX */
 .six img {
   display: inline-block;
-  width: 220px;          /* small & neat */
-  max-width: 70%;
+  max-width: 45%;
   height: auto;
-  border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
 }
 
 .six .hat {
@@ -133,11 +164,11 @@ body {
   left: 41.5%;
 }
 
+/* 🎈 BALLOONS */
 .baloons img {
   display: inline-block;
   position: absolute;
-  width: 80px;
-  will-change: transform;
+  width: 200px;
 }
 
 .baloons img:nth-child(even) {
@@ -152,6 +183,7 @@ body {
   left: 30%;
 }
 
+/* ✨ CONFETTI CIRCLES */
 .eight svg {
   width: 25px;
   position: absolute;
@@ -161,63 +193,21 @@ body {
   z-index: -1;
 }
 
-.eight svg:nth-child(1) {
-  top: 7vh;
-  left: 5vw;
-  fill: #bd6ecf;
-}
+.eight svg:nth-child(1) { top: 7vh; left: 5vw; fill: #bd6ecf; }
+.eight svg:nth-child(2) { top: 23vh; left: 35vw; fill: #7dd175; }
+.eight svg:nth-child(3) { top: 33vh; left: 23vw; fill: #349d8b; }
+.eight svg:nth-child(4) { top: 43vh; left: 57vw; fill: #347a9d; }
+.eight svg:nth-child(5) { top: 68vh; left: 7vw; fill: #c66053; }
+.eight svg:nth-child(6) { top: 42vh; left: 77vw; fill: #bfaa40; }
+.eight svg:nth-child(7) { top: 68vh; left: 83vw; fill: #e3bae8; }
+.eight svg:nth-child(8) { top: 86vh; left: 37vw; fill: #8762cb; }
+.eight svg:nth-child(9) { top: 94vh; left: 87vw; fill: #9a90da; }
 
-.eight svg:nth-child(2) {
-  top: 23vh;
-  left: 35vw;
-  fill: #7dd175;
-}
-
-.eight svg:nth-child(3) {
-  top: 33vh;
-  left: 23vw;
-  fill: #349d8b;
-}
-
-.eight svg:nth-child(4) {
-  top: 43vh;
-  left: 57vw;
-  fill: #347a9d;
-}
-
-.eight svg:nth-child(5) {
-  top: 68vh;
-  left: 7vw;
-  fill: #c66053;
-}
-
-.eight svg:nth-child(6) {
-  top: 42vh;
-  left: 77vw;
-  fill: #bfaa40;
-}
-
-.eight svg:nth-child(7) {
-  top: 68vh;
-  left: 83vw;
-  fill: #e3bae8;
-}
-
-.eight svg:nth-child(8) {
-  top: 86vh;
-  left: 37vw;
-  fill: #8762cb;
-}
-
-.eight svg:nth-child(9) {
-  top: 94vh;
-  left: 87vw;
-  fill: #9a90da;
-}
-
+/* 💖 FINAL WISH */
 .wish-hbd {
   font-size: 3em;
   margin: 0;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
 .wish h5 {
@@ -226,9 +216,11 @@ body {
   margin: 10px 0 0;
 }
 
+/* 🔁 END SECTION */
 .nine p {
   font-size: 2rem;
   font-weight: lighter;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
 #replay {
@@ -236,7 +228,7 @@ body {
   cursor: pointer;
 }
 
-/* 📱 MOBILE */
+/* 📱 RESPONSIVE */
 @media screen and (max-width: 500px) {
   .container {
     width: 90%;
@@ -246,21 +238,8 @@ body {
     width: 90%;
   }
 
-  .text-box .fake-btn {
-    right: 5px;
-    bottom: -38px;
-  }
-
-  .idea-5 span {
-    display: block;
-  }
-
   .idea-6 span {
     font-size: 10rem;
-  }
-
-  .six img {
-    width: 160px;   /* smaller on mobile */
   }
 
   .wish-hbd {
