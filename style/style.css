@@ -9,7 +9,7 @@ body {
 
 .container {
   height: 100vh;
-  width: 100vw; /* FIXED */
+  width: 100vw;
   margin: 0 auto;
   text-align: center;
   visibility: hidden;
@@ -116,10 +116,14 @@ body {
   position: relative;
 }
 
+/* ✅ FINAL IMAGE SIZE FIX */
 .six img {
   display: inline-block;
-  max-width: 45%;
+  width: 220px;          /* small & neat */
+  max-width: 70%;
   height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
 .six .hat {
@@ -132,7 +136,7 @@ body {
 .baloons img {
   display: inline-block;
   position: absolute;
-  width: 80px; /* FIXED */
+  width: 80px;
   will-change: transform;
 }
 
@@ -232,31 +236,7 @@ body {
   cursor: pointer;
 }
 
-/* Media Queries */
-@media screen and (max-height: 1000px) {
-  .six .hat {
-    left: 40%;
-  }
-}
-
-@media screen and (max-height: 800px) {
-  .six .hat {
-    left: 37%;
-  }
-}
-
-@media screen and (max-height: 700px) {
-  .six .hat {
-    left: 32%;
-  }
-}
-
-@media screen and (max-height: 850px) and (max-width: 450px) {
-  .six .hat {
-    left: 32%;
-  }
-}
-
+/* 📱 MOBILE */
 @media screen and (max-width: 500px) {
   .container {
     width: 90%;
@@ -279,9 +259,8 @@ body {
     font-size: 10rem;
   }
 
-  .six .hat {
-    width: 50px;
-    top: -20px;
+  .six img {
+    width: 160px;   /* smaller on mobile */
   }
 
   .wish-hbd {
@@ -294,6 +273,5 @@ body {
 
   .nine p {
     font-size: 1.5rem;
-    font-weight: lighter;
   }
 }
